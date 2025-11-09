@@ -1,0 +1,38 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: distributed-rate-limiter
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus,health,info
+  endpoint:
+    prometheus:
+      enabled: true
+
+rate-limiter:
+  global:
+    window-duration: 60
+    request-limit: 10000
+  default:
+    window-duration: 60
+    request-limit: 5
+  endpoints:
+    /login:
+      window-duration: 60
+      request-limit: 3
+    /data:
+      window-duration: 60
+      request-limit: 10
+
+
+
