@@ -24,7 +24,7 @@ flowchart TD
     B --> C{RateLimiterService}
     C -->|1️⃣ Global Limit| D[Redis Key: rate_limit:global]
     C -->|2️⃣ Endpoint Limit| E[Redis Key: rate_limit:endpoint:/api]
-    C -->|3️⃣ User Limit| F[Redis Key: rate_limit:user:{id}:{endpoint}]
+    C -->|3️⃣ User Limit| F[Redis Key: rate_limit:user_id_endpoint]
     D & E & F --> G[(Redis + Lua Script)]
     G -->|Allowed| H[✅ 200 OK]
     G -->|Blocked| I[🚫 429 Too Many Requests]
