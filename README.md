@@ -146,6 +146,12 @@ Sanjay Kumar S
 
 🚀 Passionate about scalable backend systems and distributed architectures
 
+## 🧾 License
+
+This project is licensed under the [MIT License](LICENSE) © 2025 **Sanjay Kumar S**
+You are free to use, modify, and distribute this project for both personal and commercial purposes just keep this license notice in your copies or derivatives.
+
+
 ## ⭐ Support
 If you found this project helpful:
 * ⭐ Star the repository on GitHub
